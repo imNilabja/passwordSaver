@@ -131,7 +131,7 @@ const Manager = () => {
                         <div className=" w-1/2 flex justify-center text-wrap ">
                             <p key={forms.Email} className="text-sm md:text-md">{item.Email}</p>
                         </div>
-                        <div className=" w-[54%] justify-between px-12 block md:flex gap-3">
+                        <div className=" w-[54%] justify-between px-5 block md:flex gap-3">
                             <span className="flex my-2">{item.username}</span>
                             <span className="flex relative left-2 my-2 blur-sm">{item.password}</span>
 
