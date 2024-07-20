@@ -88,8 +88,8 @@ const Manager = () => {
                     <div className=" md:flex block gap-5 m-7 justify-between w-[80%] mx-auto flex-wrap">
                         <input onChange={handleChange} className='border border-green-600 w-[50%] rounded-xl p-1' value={form.username} type="text" name="username" placeholder="Enter Username" />
                         
-                        <span className=' flex w-[60%] gap-2 my-6'>
-                        <input ref={ref} onChange={handleChange} className='border border-green-600 w-[80%] rounded-xl p-1' value={form.password} type="password" name="password" placeholder="Enter Password" />
+                        <span className=' flex w-[50%] gap-2 my-3'>
+                        <input ref={ref} onChange={handleChange} className='border border-green-600 w-[50%] rounded-xl p-1' value={form.password} type="password" name="password" placeholder="Enter Password" />
                         <div onClick={showPass} className="relative top-1"><button className="w-[50px] bg-green-400 rounded-xl">show</button></div>
                         </span>
                     </div>
@@ -128,10 +128,10 @@ const Manager = () => {
                 </div>
                 {forms.map(item => (
                     <div key={item.id} className="flex min-h-10 items-center border border-green-700 rounded-md p-2">
-                        <div className=" w-1/2 flex-wrap justify-center text-wrap ">
+                        <div className=" w-1/2 flex justify-center text-wrap ">
                             <p key={forms.Email} className="text-sm md:text-md">{item.Email}</p>
                         </div>
-                        <div className=" w-1/2 justify-between px-12 lg:flex md:block gap-3">
+                        <div className=" w-[54%] flex justify-between px-12 lg:flex md:block gap-3">
                             <span className="flex my-2">{item.username}</span>
                             <span className="flex relative left-2 my-2 blur-sm">{item.password}</span>
 
