@@ -117,7 +117,7 @@ const Manager = () => {
                     <div className="w-[50%] flex justify-center">
                         <span className="text-yellow-500 md:block">Site/Email</span>
                     </div>
-                    <div className="w-[50%] md:flex justify-between px-12 hidden md:block">
+                    <div className="w-[50%] justify-between px-12 hidden md:block">
                         <span className="flex text-yellow-500">Username</span>
                         <span className="flex text-yellow-500">Password</span>
                         <span className="flex text-yellow-500">Actions</span>
@@ -128,7 +128,7 @@ const Manager = () => {
                         <div className=" w-1/2 flex-wrap justify-center text-wrap ">
                             <p key={forms.Email} className="text-sm md:text-md">{item.Email}</p>
                         </div>
-                        <div className=" w-1/2 justify-between px-12 lg:flex md:block gap-3">
+                        <div className=" w-1/2 justify-between px-5 lg:flex md:block gap-3">
                             <span className="flex my-2">{item.username}</span>
                             <span className="flex relative left-2 my-2 blur-sm">{item.password}</span>
 
