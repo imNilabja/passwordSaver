@@ -85,7 +85,7 @@ const Manager = () => {
                 <div className="bg-green-200 flex-col rounded-md w-[100%] mt-10 p-3 justify-center">
                     <input onChange={handleChange} className=' border border-green-600 flex w-[80%] rounded-xl mx-auto p-1' value={form.Email} type="text" name="Email" placeholder="Enter Email id/Website URL" />
 
-                    <div className=" flex gap-5 m-7 justify-between w-[80%] mx-auto flex-wrap p-2">
+                    <div className=" flex gap-5 m-7 justify-between w-[80%] mx-auto flex-wrap">
                         <input onChange={handleChange} className='border border-green-600 w-[700px] rounded-xl p-1' value={form.username} type="text" name="username" placeholder="Enter Username" />
                         <input ref={ref} onChange={handleChange} className='border border-green-600 w-[360px] rounded-xl p-1' value={form.password} type="password" name="password" placeholder="Enter Password" />
                         <div onClick={showPass} className="relative top-1"><button className="w-[50px] bg-green-400 rounded-xl">show</button></div>
@@ -124,7 +124,7 @@ const Manager = () => {
                     </div>
                 </div>
                 {forms.map(item => (
-                    <div key={item.id} className="flex min-h-10 items-center border border-green-700 rounded-md">
+                    <div key={item.id} className="flex min-h-10 items-center border border-green-700 rounded-md p-2">
                         <div className=" w-1/2 flex-wrap justify-center text-wrap ">
                             <p key={forms.Email} className="text-sm md:text-md">{item.Email}</p>
                         </div>
