@@ -125,7 +125,7 @@ const Manager = () => {
                 </div>
                 {forms.map(item => (
                     <div key={item.id} className="flex min-h-10 items-center border border-green-700 rounded-md">
-                        <div className=" bg-red-400 w-1/2 flex-wrap justify-center text-wrap ">
+                        <div className=" w-1/2 flex-wrap justify-center text-wrap ">
                             <p key={forms.Email} className="text-sm md:text-md">{item.Email}</p>
                         </div>
                         <div className=" w-1/2 justify-between px-12 lg:flex md:block gap-3">
