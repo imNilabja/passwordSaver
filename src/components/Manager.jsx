@@ -70,7 +70,7 @@ const Manager = () => {
 
         <div className="bg-green-100 h-[100vh] w-[99.2vw] mx-auto">
 
-            <div className="bg-green-200 mx-auto min-w-[50%] max-w-[70%] h-fit flex-col rounded-lg">
+            <div className="bg-green-200 mx-auto min-w-[50%] max-w-[70%] h-fit flex-col rounded-xl">
 
                 <div className="logo relative w-fit font-bold text-3xl left-5 mx-auto ">
                     <span className="text-green-600">&lt;</span>
@@ -115,7 +115,7 @@ const Manager = () => {
             <div className="bg-green-200 mx-auto min-w-[50%] max-w-[70%] h-fit flex-col mt-5 rounded-lg">
                 <div className="heading w-[100%] min-h-8 bg-green-900 rounded-lg flex justify-between items-center mx-auto">
                     <div className="w-[50%] flex justify-center">
-                        <span className="md:flex  text-yellow-500 hidden md:block">Site/Email</span>
+                        <span className="text-yellow-500 md:block">Site/Email</span>
                     </div>
                     <div className="w-[50%] md:flex justify-between px-12 hidden md:block">
                         <span className="flex text-yellow-500">Username</span>
@@ -124,15 +124,15 @@ const Manager = () => {
                     </div>
                 </div>
                 {forms.map(item => (
-                    <div key={item.id} className="flex min-h-10 items-center ">
+                    <div key={item.id} className="flex min-h-10 items-center border border-green-700 rounded-md">
                         <div className="w-1/2 flex justify-center">
                             <p key={forms.Email} className="">{item.Email}</p>
                         </div>
-                        <div className=" w-1/2 flex justify-between px-12 ">
-                            <span className="flex ">{item.username}</span>
-                            <span className="flex relative left-4 blur-sm">{item.password}</span>
+                        <div className=" w-1/2 justify-between px-12 lg:flex md:block gap-3">
+                            <span className="flex my-2">{item.username}</span>
+                            <span className="flex relative left-2 my-2 blur-sm">{item.password}</span>
 
-                            <span className="flex ">
+                            <span className="flex my-2">
                                 <span className='mx-2'>
                                     <button onClick={(e) => handleEdit(e,item.id)} ><lord-icon
 
