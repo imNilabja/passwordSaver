@@ -132,7 +132,7 @@ const Manager = () => {
                             <span className="flex my-2">{item.username}</span>
                             <span className="flex relative left-2 my-2 blur-sm">{item.password}</span>
 
-                            <span className="flex my-2">
+                            <span className="flex mt-3 mb-1">
                                 <span className='mx-2'>
                                     <button onClick={(e) => handleEdit(e,item.id)} ><lord-icon
 
