@@ -110,9 +110,9 @@ const Manager = () => {
 
 
             </div>
-            <div className="pasCont bg-green-200 mx-auto min-w-[50%] max-w-[80%] h-fit flex-col rounded-lg"></div>
+ 
 
-            <div className="bg-green-200 mx-auto min-w-[50%] max-w-[70%] h-fit flex-col mt-5 rounded-lg">
+            <div className="bg-green-200 mx-auto min-w-[80%] max-w-[80%] h-fit flex-col mt-5 rounded-lg">
                 <div className="heading w-[100%] min-h-8 bg-green-900 rounded-lg flex justify-between items-center mx-auto">
                     <div className="w-[50%] flex justify-center">
                         <span className="text-yellow-500 md:block">Site/Email</span>
