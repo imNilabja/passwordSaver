@@ -11,15 +11,15 @@ const Manager = () => {
         setForms(storedForms);
     }, []);
 
-    const handleEdit = (e,id) => {
+    const handleEdit = (e, id) => {
 
         const EditForm = forms.find(item => {
             return item.id === id;
         })
-        if(EditForm){
+        if (EditForm) {
             setForm({ id: EditForm.id, Email: EditForm.Email, username: EditForm.username, password: EditForm.password })
         }
-        handleDelete(e,id)
+        handleDelete(e, id)
 
     }
 
@@ -70,7 +70,7 @@ const Manager = () => {
 
         <div className="bg-green-100 h-[100vh] w-[99.2vw] mx-auto">
 
-            <div className="bg-green-200 mx-auto min-w-[50%] max-w-[80%] h-fit flex-col rounded-xl">
+            <div className="bg-green-200 mx-auto min-w-[90%] max-w-[90%] h-fit flex-col rounded-xl">
 
                 <div className="logo relative w-fit font-bold text-3xl left-5 mx-auto ">
                     <span className="text-green-600">&lt;</span>
@@ -85,10 +85,13 @@ const Manager = () => {
                 <div className="bg-green-200 flex-col rounded-md w-[100%] mt-10 p-3 justify-center">
                     <input onChange={handleChange} className=' border border-green-600 flex w-[80%] rounded-xl mx-auto p-1' value={form.Email} type="text" name="Email" placeholder="Enter Email id/Website URL" />
 
-                    <div className=" flex gap-5 m-7 justify-between w-[80%] mx-auto flex-wrap">
-                        <input onChange={handleChange} className='border border-green-600 w-[700px] rounded-xl p-1' value={form.username} type="text" name="username" placeholder="Enter Username" />
-                        <input ref={ref} onChange={handleChange} className='border border-green-600 w-[360px] rounded-xl p-1' value={form.password} type="password" name="password" placeholder="Enter Password" />
+                    <div className=" md:flex block gap-5 m-7 justify-between w-[80%] mx-auto flex-wrap">
+                        <input onChange={handleChange} className='border border-green-600 w-[50%] rounded-xl p-1' value={form.username} type="text" name="username" placeholder="Enter Username" />
+                        
+                        <span className=' flex w-[60%] gap-2 my-6'>
+                        <input ref={ref} onChange={handleChange} className='border border-green-600 w-[80%] rounded-xl p-1' value={form.password} type="password" name="password" placeholder="Enter Password" />
                         <div onClick={showPass} className="relative top-1"><button className="w-[50px] bg-green-400 rounded-xl">show</button></div>
+                        </span>
                     </div>
 
 
@@ -110,14 +113,14 @@ const Manager = () => {
 
 
             </div>
- 
 
-            <div className="bg-green-200 mx-auto min-w-[80%] max-w-[80%] h-fit flex-col mt-5 rounded-lg">
+
+            <div className="bg-green-200 mx-auto md:min-w-[90%] md:max-w-[90%] min-w-[80%] min-w-[80%] h-fit flex-col mt-5 rounded-lg">
                 <div className="heading w-[100%] min-h-8 bg-green-900 rounded-lg flex justify-between items-center mx-auto">
                     <div className="w-[50%] flex justify-center">
                         <span className="text-yellow-500 md:block">Site/Email</span>
                     </div>
-                    <div className="w-[50%] justify-between px-12 hidden md:block">
+                    <div className="w-[50%] md:flex justify-between px-5 hidden md:block">
                         <span className="flex text-yellow-500">Username</span>
                         <span className="flex text-yellow-500">Password</span>
                         <span className="flex text-yellow-500">Actions</span>
@@ -128,13 +131,13 @@ const Manager = () => {
                         <div className=" w-1/2 flex-wrap justify-center text-wrap ">
                             <p key={forms.Email} className="text-sm md:text-md">{item.Email}</p>
                         </div>
-                        <div className=" w-1/2 justify-between px-5 lg:flex md:block gap-3">
+                        <div className=" w-1/2 justify-between px-12 lg:flex md:block gap-3">
                             <span className="flex my-2">{item.username}</span>
                             <span className="flex relative left-2 my-2 blur-sm">{item.password}</span>
 
                             <span className="flex mt-3 mb-1">
                                 <span className='mx-2'>
-                                    <button onClick={(e) => handleEdit(e,item.id)} ><lord-icon
+                                    <button onClick={(e) => handleEdit(e, item.id)} ><lord-icon
 
                                         src="https://cdn.lordicon.com/ogkflacg.json"
                                         trigger="hover"
