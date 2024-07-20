@@ -70,7 +70,7 @@ const Manager = () => {
 
         <div className="bg-green-100 h-[100vh] w-[99.2vw] mx-auto">
 
-            <div className="bg-green-200 mx-auto min-w-[50%] max-w-[70%] h-fit flex-col rounded-xl">
+            <div className="bg-green-200 mx-auto min-w-[50%] max-w-[80%] h-fit flex-col rounded-xl">
 
                 <div className="logo relative w-fit font-bold text-3xl left-5 mx-auto ">
                     <span className="text-green-600">&lt;</span>
@@ -87,7 +87,7 @@ const Manager = () => {
 
                     <div className=" flex gap-5 m-7 justify-between w-[80%] mx-auto flex-wrap p-2">
                         <input onChange={handleChange} className='border border-green-600 w-[700px] rounded-xl p-1' value={form.username} type="text" name="username" placeholder="Enter Username" />
-                        <input ref={ref} onChange={handleChange} className='border border-green-600 w-[240px] rounded-xl p-1' value={form.password} type="password" name="password" placeholder="Enter Password" />
+                        <input ref={ref} onChange={handleChange} className='border border-green-600 w-[360px] rounded-xl p-1' value={form.password} type="password" name="password" placeholder="Enter Password" />
                         <div onClick={showPass} className="relative top-1"><button className="w-[50px] bg-green-400 rounded-xl">show</button></div>
                     </div>
 
@@ -110,7 +110,7 @@ const Manager = () => {
 
 
             </div>
-            <div className="pasCont bg-green-200 mx-auto min-w-[50%] max-w-[70%] h-fit flex-col rounded-lg"></div>
+            <div className="pasCont bg-green-200 mx-auto min-w-[50%] max-w-[80%] h-fit flex-col rounded-lg"></div>
 
             <div className="bg-green-200 mx-auto min-w-[50%] max-w-[70%] h-fit flex-col mt-5 rounded-lg">
                 <div className="heading w-[100%] min-h-8 bg-green-900 rounded-lg flex justify-between items-center mx-auto">
