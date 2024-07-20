@@ -11,16 +11,27 @@ const Manager = () => {
         setForms(storedForms);
     }, []);
 
+    const handleEdit = (e,id) => {
+
+        const EditForm = forms.find(item => {
+            return item.id === id;
+        })
+        if(EditForm){
+            setForm({ id: EditForm.id, Email: EditForm.Email, username: EditForm.username, password: EditForm.password })
+        }
+        handleDelete(e,id)
+
+    }
 
     const handleDelete = (e, id) => {
-        
+
         const updatedForms = forms.filter(item => {
             return item.id !== id;
         })
         setForms(updatedForms)
         localStorage.setItem("forms", JSON.stringify(updatedForms))
     }
-    
+
 
 
     const handleAdd = () => {
@@ -34,7 +45,7 @@ const Manager = () => {
     }
 
 
-    
+
 
     const showPass = () => {
 
@@ -102,28 +113,28 @@ const Manager = () => {
             <div className="pasCont bg-green-200 mx-auto min-w-[50%] max-w-[70%] h-fit flex-col rounded-lg"></div>
 
             <div className="bg-green-200 mx-auto min-w-[50%] max-w-[70%] h-fit flex-col mt-5 rounded-lg">
-                <div className="heading w-[100%] h-8 bg-green-900 rounded-lg flex justify-between items-center mx-auto">
+                <div className="heading w-[100%] min-h-8 bg-green-900 rounded-lg flex justify-between items-center mx-auto">
                     <div className="w-[50%] flex justify-center">
-                        <span className="flex  text-yellow-500">Site/Email</span>
+                        <span className="md:flex  text-yellow-500 hidden md:block">Site/Email</span>
                     </div>
-                    <div className="w-[50%] flex justify-between px-12">
+                    <div className="w-[50%] md:flex justify-between px-12 hidden md:block">
                         <span className="flex text-yellow-500">Username</span>
                         <span className="flex text-yellow-500">Password</span>
                         <span className="flex text-yellow-500">Actions</span>
                     </div>
                 </div>
                 {forms.map(item => (
-                    <div key={item.id} className="flex min-h-10 items-center">
+                    <div key={item.id} className="flex min-h-10 items-center ">
                         <div className="w-1/2 flex justify-center">
                             <p key={forms.Email} className="">{item.Email}</p>
                         </div>
                         <div className=" w-1/2 flex justify-between px-12 ">
                             <span className="flex ">{item.username}</span>
-                            <span className="flex relative right-4 blur-sm">{item.password}</span>
+                            <span className="flex relative left-4 blur-sm">{item.password}</span>
 
                             <span className="flex ">
                                 <span className='mx-2'>
-                                    <button ><lord-icon
+                                    <button onClick={(e) => handleEdit(e,item.id)} ><lord-icon
 
                                         src="https://cdn.lordicon.com/ogkflacg.json"
                                         trigger="hover"
