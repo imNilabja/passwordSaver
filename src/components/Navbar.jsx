@@ -5,7 +5,7 @@ export const Navbar = () => {
     <>
 
       <nav className='bg-black flex h-14 items-center justify-between px-5'>
-        <div className="logo font-bold text-xl">
+        <div className="logo font-bold text-xl mx">
           <span className="text-green-500">&lt;</span>
           <span className="text-white">Pass</span>
           <span className="text-green-500">OP</span>

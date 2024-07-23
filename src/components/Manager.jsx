@@ -128,14 +128,14 @@ const Manager = () => {
                 </div>
                 {forms.map(item => (
                     <div key={item.id} className="flex min-h-10 items-center border border-green-700 rounded-md p-2">
-                        <div className=" w-1/2 flex justify-center text-wrap ">
+                        <div className=" w-1/2 flex justify-center text-wrap border-x-2 border-yellow-400">
                             <p key={forms.Email} className="text-sm md:text-md">{item.Email}</p>
                         </div>
                         <div className=" w-[54%] justify-between px-5 block md:flex gap-3">
                             <span className="flex my-2">{item.username}</span>
                             <span className="flex relative left-2 my-2 blur-sm">{item.password}</span>
 
-                            <span className="flex mt-3 mb-1">
+                            <span className="flex mt-3 mb-1 border-x-2 border-yellow-400">
                                 <span className='mx-2'>
                                     <button onClick={(e) => handleEdit(e, item.id)} ><lord-icon
 
