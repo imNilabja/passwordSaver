@@ -89,7 +89,7 @@ const Manager = () => {
                         <input onChange={handleChange} className='border border-green-600 w-[50%] rounded-xl p-1' value={form.username} type="text" name="username" placeholder="Enter Username" />
                         
                         <span className=' flex w-[50%] gap-2 my-3'>
-                        <input ref={ref} onChange={handleChange} className='border border-green-600 w-[50%] rounded-xl p-1' value={form.password} type="password" name="password" placeholder="Enter Password" />
+                        <input ref={ref} onChange={handleChange} className='border border-green-600 w-[100%] rounded-xl p-1' value={form.password} type="password" name="password" placeholder="Enter Password" />
                         <div onClick={showPass} className="relative top-1"><button className="w-[50px] bg-green-400 rounded-xl">show</button></div>
                         </span>
                     </div>
